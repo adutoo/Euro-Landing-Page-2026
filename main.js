@@ -629,7 +629,7 @@ document.addEventListener("DOMContentLoaded", initAwardsCarousel);
 // GOOGLE SHEETS + LEADSQUARED INTEGRATION
 // =========================
 const CONFIG = {
-  GOOGLE_SCRIPT_URL: "https://script.google.com/macros/s/AKfycbzEVXw1CQDFVIn9DGR_ZyVTMjYm_AzUUPHvl4fiEn6pkg0unVQuVqaqvxNLP-uKSj_lzw/exec   "
+  GOOGLE_SCRIPT_URL: "https://script.google.com/macros/s/AKfycbw5fHMuQ1JfD-9bsLyd6Am0Yz64VrypcfiGtGhXWy9UTWA8Bia4Zz8ZdoGy4hw-XXaYqw/exec"
 };
 
 function getUTMParameters() {
@@ -1334,4 +1334,5 @@ document.addEventListener('DOMContentLoaded', function () {
       observer.observe(grid);
     });
   });
+
 })();
