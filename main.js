@@ -530,7 +530,12 @@ function initAwardsCarousel() {
       const x = -index * slideW;
       applyTranslate(x);
       lastTranslate = x;
-      requestAnimationFrame(() => setTransition(true));
+      // Double rAF ensures the browser has painted the instant position before re-enabling transition
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          setTransition(true);
+        });
+      });
     }
     if (index === 0) {
       setTransition(false);
@@ -538,7 +543,11 @@ function initAwardsCarousel() {
       const x = -index * slideW;
       applyTranslate(x);
       lastTranslate = x;
-      requestAnimationFrame(() => setTransition(true));
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          setTransition(true);
+        });
+      });
     }
   }
 
