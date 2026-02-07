@@ -3542,7 +3542,6 @@ body.scrolling-up .hero-header:not(:hover) {
   will-change: transform, opacity;
 }
 
-/* Add smooth transitions to all interactive elements */
 a,
 button,
 .featureCard,
@@ -3550,3 +3549,612 @@ button,
 .achItem {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+/* =============================================
+   MOBILE VIEW REFINEMENTS - Custom Adjustments
+   ============================================= */
+
+/* 1. Hide social buttons */
+.socials {
+  display: none !important;
+}
+
+/* 2. Mobile-only line breaks */
+.mobileBreak {
+  display: none;
+}
+
+.mobileBreak2 {
+  display: none;
+}
+
+@media (max-width: 560px) {
+  .mobileBreak {
+    display: inline;
+  }
+
+  .mobileBreak2 {
+    display: inline;
+  }
+
+  /* 3. Call button below submit button in section 1 */
+  .hero-actions {
+    flex-direction: column-reverse !important;
+    gap: 12px !important;
+  }
+
+  .callBtn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* 4. Increase section 2 (Features) card image size by 30% */
+  .featureIcon {
+    width: 78px !important;
+    /* 60px * 1.3 */
+    height: 78px !important;
+  }
+
+  /* 5. Remove section border lines for seamless merging */
+  .featuresSection,
+  .iitSection,
+  .achSection,
+  .directorSection,
+  .awardsSection,
+  .infraSection,
+  .visitSection,
+  .limitedSection {
+    border-top: none !important;
+    border-bottom: none !important;
+  }
+
+  /* 7. Increase left/right margin in Director section text (mobile) */
+  .directorPara {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  /* 8. Right-align ~Shiv Ram signature */
+  .directorSign {
+    text-align: right !important;
+    padding-right: 20px !important;
+  }
+
+  .directorSignText {
+    display: inline-block;
+    text-align: right;
+  }
+
+  /* 9. Apply same margin to World Class Facilities text */
+  .infraSub {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  /* 10. Left-align last section content below heading */
+  .limitedLeft {
+    text-align: left !important;
+  }
+
+  .limitedSideTitle {
+    text-align: left !important;
+  }
+
+  .limitedContacts {
+    align-items: flex-start !important;
+  }
+
+  .limitedContactRow {
+    justify-content: flex-start !important;
+    text-align: left !important;
+  }
+
+  .limitedContactText {
+    text-align: left !important;
+  }
+}
+
+/* ===================================================
+   MOBILE VIEW FIXES - Additional Corrections
+   =================================================== */
+@media (max-width: 560px) {
+
+  /* Fix limitedLeft - center container but left-align contacts */
+  .limitedLeft {
+    text-align: center !important;
+  }
+
+  /* Fix text overflow for Your Child's Second Home */
+  .limitedTopTitle {
+    font-size: clamp(22px, 5.5vw, 32px) !important;
+    line-height: 1.3 !important;
+    padding: 0 15px !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* Reduce section spacing */
+  section {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+
+  /* Close space below images */
+  .iitPhoto img,
+  .directorPhotoFrame img,
+  .achImageWrap img {
+    display: block !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Fix call button - ensure it's below submit button */
+  .hero-left .mt-6 {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    gap: 12px !important;
+  }
+}
+
+
+/* Final mobile fixes for heading alignment and IIT section spacing */
+@media (max-width: 560px) {
+
+  /* Center the BOOK A SEAT heading, keep contacts left-aligned */
+  .limitedSideTitle {
+    text-align: center !important;
+  }
+
+  /* Remove space below IIT section image */
+  .iitSection {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .iitPhoto {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .iitBtn {
+    margin-bottom: 0 !important;
+  }
+}
+
+
+/* Force left alignment for contact elements */
+@media (max-width: 560px) {
+  .limitedContacts {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    width: 100% !important;
+  }
+
+  .limitedContactRow {
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    text-align: left !important;
+    width: 100% !important;
+  }
+
+  .limitedIcon {
+    flex-shrink: 0 !important;
+  }
+
+  .limitedContactText {
+    text-align: left !important;
+    display: block !important;
+  }
+}
+
+
+/* Remove excess left margin/padding from contact elements */
+@media (max-width: 560px) {
+  .limitedLeft {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .limitedContacts {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  .limitedContactRow {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+  }
+}
+
+
+/* Remove bottom space from IIT section for seamless merge */
+@media (max-width: 560px) {
+  .iitSection {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .iitInner {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .iitBtn {
+    margin-bottom: 0 !important;
+  }
+
+  /* Also ensure next section has no top spacing */
+  .achSection {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+}
+
+
+/* Position IIT image and button at bottom of section */
+@media (max-width: 560px) {
+  .iitInner {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-end !important;
+    min-height: auto !important;
+  }
+
+  .iitPhoto {
+    order: 2 !important;
+    margin-top: auto !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .iitPhoto img {
+    display: block !important;
+    width: 100% !important;
+    margin-bottom: 0 !important;
+  }
+
+  .iitBtn {
+    position: relative !important;
+    bottom: auto !important;
+    margin-bottom: -25px !important;
+    z-index: 10 !important;
+  }
+}
+
+
+/* Aggressively remove ALL space between IIT and Academic sections */
+@media (max-width: 560px) {
+
+  /* Target the IIT section wrapper */
+  section:has(.iitPhoto) {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Target all children */
+  section:has(.iitPhoto) \u003e * {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* Target Academic Achievers section */
+  section:has(.achHeading) {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  /* Override global section padding for this specific case */
+  .iitSection,
+  section[class*='iit'] {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
+
+
+/* CORRECT class names - remove space between iitiansSection and academicSection */
+@media (max-width: 560px) {
+  .iitiansSection {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .iitiansInner {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .iitiansImageWrap {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .iitiansImage {
+    display: block !important;
+    margin-bottom: 0 !important;
+  }
+
+  .iitiansCta {
+    margin-bottom: 0 !important;
+  }
+
+  .iitiansBtn {
+    margin-bottom: 0 !important;
+  }
+
+  .academicSection {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+}
+
+
+/* Final fix: close gap completely and add proper heading spacing */
+@media (max-width: 560px) {
+
+  /* Move button up to overlap and close gap */
+  .iitiansBtn {
+    position: relative !important;
+    top: 30px !important;
+    margin-bottom: -30px !important;
+  }
+
+  /* Ensure Academic section has proper heading spacing */
+  .achHeading {
+    padding-top: 50px !important;
+    margin-top: 0 !important;
+  }
+
+  /* Override previous academicSection top spacing */
+  .academicSection {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+}
+
+
+/* Fix button z-index and increase heading spacing */
+@media (max-width: 560px) {
+
+  /* Keep button on top with higher z-index */
+  .iitiansBtn {
+    z-index: 100 !important;
+    position: relative !important;
+  }
+
+  .iitiansCta {
+    z-index: 100 !important;
+    position: relative !important;
+  }
+
+  /* Increase Academic Achievers heading spacing */
+  .achHeading {
+    padding-top: 80px !important;
+  }
+
+  /* Ensure Academic section doesn't overlap button */
+  .academicSection {
+    position: relative !important;
+    z-index: 1 !important;
+  }
+}
+/* Add proper visual separation between IITians and Academic sections */
+@media (max-width: 560px) {
+  /* Add spacing to Academic Achievers section for visual separation */
+  .academicSection {
+    padding-top: 60px !important;  /* Add space for visual separation */
+    margin-top: 0 !important;
+  }
+  
+  /* Keep IITians section tight */
+  .iitiansSection {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  
+  /* Adjust button to not overlap too much */
+  .iitiansBtn {
+    margin-bottom: 0 !important;
+    z-index: 100 !important;
+  }
+}
+
+
+/* Remove final 2px gap between sections */
+@media (max-width: 560px) {
+  /* Eliminate all possible spacing sources */
+  .iitiansSection,
+  .iitiansInner,
+  .iitiansImageWrap,
+  .iitiansImage,
+  .iitiansCta {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    border-bottom: none !important;
+  }
+  
+  /* Remove any line-height or spacing from button area */
+  .iitiansCta {
+    line-height: 0 !important;
+  }
+  
+  /* Ensure Academic section starts immediately */
+  .academicSection {
+    margin-top: -2px !important;  /* Pull up 2px to close gap */
+  }
+}
+
+
+/* Fix button visibility and adjust gap to 0.7px */
+@media (max-width: 560px) {
+  /* Restore button visibility */
+  .iitiansCta {
+    line-height: normal !important;  /* Restore normal line-height */
+  }
+  
+  /* Fine-tune gap closure to 0.7px */
+  .academicSection {
+    margin-top: -0.7px !important;  /* Pull up just 0.7px */
+  }
+}
+
+
+/* Hide Book A Seat button from IITians section on mobile */
+@media (max-width: 560px) {
+  .iitiansBtn,
+  .iitiansCta {
+    display: none !important;
+  }
+}
+
+
+/* Ensure call button is below form on mobile */
+@media (max-width: 560px) {
+  .hero-grid {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  
+  .hero-left {
+    order: 1 !important;  /* Title first */
+  }
+  
+  .hero-right {
+    order: 2 !important;  /* Form second */
+  }
+  
+  /* Call button container */
+  .hero-left .mt-6,
+  .hero-left \u003e div:has(.call-btn) {
+    order: 3 !important;  /* Call button last (below form) */
+  }
+}
+
+
+/* Reduce top spacing for call button below form */
+@media (max-width: 560px) {
+  /* Target the call button container that comes after hero-grid */
+  .hero-inner \u003e .mt-6 {
+    margin-top: 1rem !important;  /* Reduce from 1.5rem (mt-6) to 1rem */
+  }
+}
+
+
+/* Disable all scroll-up animations */
+body.scrolling-up .scroll-animate,
+body.scrolling-up .scroll-animate.up-animate,
+body.scrolling-up .scroll-scale,
+body.scrolling-up .section-fade,
+body.scrolling-up .parallax-bg,
+body.scrolling-up .scroll-particles,
+body.scrolling-up .hero-bg--reveal {
+  transform: none !important;
+  opacity: 1 !important;
+  transition: none !important;
+  animation: none !important;
+}
+
+
+/* Optimize hero section spacing for mobile to fit all elements on screen */
+@media (max-width: 560px) {
+  .hero {
+    min-height: 100vh !important;  /* Ensure it fits in viewport */
+    padding-top: 60px !important;  /* Reduce top padding */
+    padding-bottom: 20px !important;  /* Reduce bottom padding */
+  }
+  
+  .hero-inner {
+    gap: 1rem !important;  /* Reduce gap between elements */
+  }
+  
+  .hero-grid {
+    gap: 1rem !important;  /* Reduce gap between title and form */
+  }
+  
+  .hero-title {
+    font-size: clamp(20px, 5vw, 28px) !important;  /* Reduce title size */
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .enquiry-card {
+    padding: 1rem !important;  /* Reduce form padding */
+  }
+  
+  .formFieldLike,
+  .formSelectLike {
+    padding: 0.6rem !important;  /* Reduce field padding */
+    margin-bottom: 0.5rem !important;  /* Reduce field spacing */
+  }
+  
+  /* Further reduce call button top margin */
+  .hero-inner \u003e .mt-6 {
+    margin-top: 0.5rem !important;  /* Minimal spacing */
+  }
+}
+
+
+/* AGGRESSIVE hero section compression for mobile - fit all in viewport */
+@media (max-width: 560px) {
+  /* Further compress hero section */
+  .hero {
+    padding-top: 70px !important;  /* Just below header */
+    padding-bottom: 10px !important;
+  }
+  
+  .hero-inner {
+    gap: 0.5rem !important;
+  }
+  
+  .hero-grid {
+    gap: 0.75rem !important;
+  }
+  
+  /* Further reduce title */
+  .hero-title {
+    font-size: clamp(18px, 4.5vw, 24px) !important;
+    line-height: 1.2 !important;
+    margin-bottom: 0.25rem !important;
+  }
+  
+  /* Compress form significantly */
+  .enquiry-card {
+    padding: 0.75rem !important;
+    gap: 0.25rem !important;
+  }
+  
+  .formFieldLike,
+  .formSelectLike,
+  .select-trigger {
+    padding: 0.5rem 0.75rem !important;
+    font-size: 14px !important;
+    height: auto !important;
+    min-height: 40px !important;
+  }
+  
+  /* Reduce spacing between form fields */
+  .formFieldLike + .formFieldLike,
+  .formFieldLike + .custom-select-container,
+  .custom-select-container + .custom-select-container {
+    margin-top: 0.4rem !important;
+  }
+  
+  /* Smaller submit button */
+  .enquiry-card button[type='submit'] {
+    padding: 0.7rem !important;
+    font-size: 15px !important;
+    margin-top: 0.5rem !important;
+  }
+  
+  /* Minimal call button margin */
+  .hero-inner \u003e .mt-6 {
+    margin-top: 0.25rem !important;
+  }
+  
+  /* Reduce call button size */
+  .call-btn {
+    padding: 0.6rem 1rem !important;
+    font-size: 13px !important;
+  }
+}
+
