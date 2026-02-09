@@ -4158,3 +4158,96 @@ body.scrolling-up .hero-bg--reveal {
   }
 }
 
+
+/* Fix form styling issues on mobile */
+@media (max-width: 560px) {
+  /* Reset form fields to proper styling */
+  .formFieldLike,
+  .formSelectLike,
+  .select-trigger {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 12px 16px !important;
+    font-size: 16px !important; /* Prevents iOS zoom */
+    height: auto !important;
+    min-height: 48px !important;
+    border-radius: 25px !important;
+    border: 2px solid rgba(255,255,255,0.3) !important;
+    background: rgba(255,255,255,0.95) !important;
+    color: #333 !important;
+  }
+  
+  /* Fix custom select container */
+  .custom-select-container {
+    width: 100% !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  /* Fix select trigger display */
+  .select-trigger {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+  
+  /* Fix form container */
+  .enquiry-card,
+  .enquiryFormLike {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 1.25rem !important;
+    border-radius: 16px !important;
+  }
+  
+  /* Fix submit button */
+  .enquiry-card button[type='submit'],
+  .formSubmitLike {
+    width: 100% !important;
+    padding: 14px !important;
+    font-size: 16px !important;
+    border-radius: 25px !important;
+    margin-top: 0.75rem !important;
+  }
+  
+  /* Fix limited seats form styling */
+  .limitedForm .formFieldLike,
+  .limitedForm .select-trigger {
+    background: rgba(255,255,255,0.95) !important;
+  }
+}
+
+
+/* Fix custom select dropdowns to match input fields */
+@media (max-width: 560px) {
+  /* Remove extra styling from select container */
+  .custom-select-container,
+  .formSelectLike {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin-bottom: 0.5rem !important;
+    box-shadow: none !important;
+  }
+  
+  /* Style select trigger same as input fields */
+  .select-trigger {
+    padding: 12px 16px !important;
+    min-height: 48px !important;
+    border-radius: 25px !important;
+    border: 2px solid rgba(200,200,200,0.4) !important;
+    background: rgba(255,255,255,0.95) !important;
+    box-shadow: none !important;
+  }
+  
+  /* Ensure input fields match */
+  .formFieldLike {
+    padding: 12px 16px !important;
+    min-height: 48px !important;
+    border-radius: 25px !important;
+    border: 2px solid rgba(200,200,200,0.4) !important;
+    background: rgba(255,255,255,0.95) !important;
+    margin-bottom: 0.5rem !important;
+    box-shadow: none !important;
+  }
+}
+
