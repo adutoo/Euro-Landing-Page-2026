@@ -23,11 +23,11 @@ body {
 }
 
 body.bg-white {
-  background: #0b2c61 !important;
+  background: #ffffff !important;
 }
 
 body {
-  background: #071f44;
+  background: #ffffff;
 }
 
 .overflow-x-hidden {
@@ -799,27 +799,41 @@ html.lenis body {
 }
 
 .learnMoreBtn {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 50px;
-  padding: 0 32px;
-  background: #ff7a1a;
+  height: 56px;
+  padding: 0 48px;
+  background: #1e3a5f;
   color: #fff;
-  font-weight: 800;
-  letter-spacing: .06em;
-  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  border-radius: 14px;
   text-transform: uppercase;
-  font-size: 16px;
-  box-shadow: 0 10px 25px rgba(255, 122, 26, 0.30);
-  transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
+  font-size: 18px;
   text-decoration: none;
+  border: none;
+  overflow: visible;
 }
 
-.learnMoreBtn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 15px 30px rgba(255, 122, 26, 0.40);
-  filter: brightness(1.02);
+.learnMoreBtn::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  background: transparent;
+  border: 2.5px solid #f67b1b;
+  z-index: -1;
+  transition: top .18s ease, left .18s ease;
+}
+
+.learnMoreBtn:hover::after {
+  top: 8px;
+  left: 8px;
 }
 
 #enquiryForm {
@@ -899,25 +913,41 @@ html.lenis body {
 }
 
 .iitiansBtn {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 320px;
   height: 56px;
-  border-radius: 10px;
-  background: linear-gradient(90deg, #0b2c61 0%, #2f6fd6 100%);
+  border-radius: 14px;
+  background: #1e3a5f;
   color: #fff;
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
-  letter-spacing: .06em;
-  box-shadow: 0 8px 0 rgba(0, 0, 0, .55), 0 14px 28px rgba(0, 0, 0, .16);
-  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+  letter-spacing: .04em;
+  font-size: 18px;
+  text-transform: uppercase;
+  border: none;
+  overflow: visible;
 }
 
-.iitiansBtn:hover {
-  transform: translateY(-2px);
-  filter: brightness(1.03);
-  box-shadow: 0 6px 0 rgba(0, 0, 0, .55), 0 16px 32px rgba(0, 0, 0, .18);
+.iitiansBtn::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  background: transparent;
+  border: 2.5px solid #f67b1b;
+  z-index: -1;
+  transition: top .18s ease, left .18s ease;
+}
+
+.iitiansBtn:hover::after {
+  top: 8px;
+  left: 8px;
 }
 
 @media (max-width: 768px) {
@@ -1283,25 +1313,41 @@ html.lenis body {
 }
 
 .academicBtn {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 320px;
   height: 56px;
-  border-radius: 10px;
-  background: linear-gradient(90deg, #0b2c61 0%, #2f6fd6 100%);
+  border-radius: 14px;
+  background: #1e3a5f;
   color: #fff;
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
-  letter-spacing: .06em;
-  box-shadow: 0 8px 0 rgba(0, 0, 0, .55), 0 14px 28px rgba(0, 0, 0, .16);
-  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+  letter-spacing: .04em;
+  font-size: 18px;
+  text-transform: uppercase;
+  border: none;
+  overflow: visible;
 }
 
-.academicBtn:hover {
-  transform: translateY(-2px);
-  filter: brightness(1.03);
-  box-shadow: 0 6px 0 rgba(0, 0, 0, .55), 0 16px 32px rgba(0, 0, 0, .18);
+.academicBtn::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  background: transparent;
+  border: 2.5px solid #f67b1b;
+  z-index: -1;
+  transition: top .18s ease, left .18s ease;
+}
+
+.academicBtn:hover::after {
+  top: 8px;
+  left: 8px;
 }
 
 @media (max-width: 768px) {
@@ -1554,7 +1600,7 @@ html.lenis body {
 
 .statsGrid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 22px;
   align-items: center;
   text-align: center;
@@ -1755,25 +1801,41 @@ html.lenis body {
 }
 
 .directorBtn {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 320px;
   height: 56px;
-  border-radius: 10px;
-  background: linear-gradient(90deg, #0b2c61 0%, #2f6fd6 100%);
+  border-radius: 14px;
+  background: #1e3a5f;
   color: #fff;
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
-  letter-spacing: .06em;
-  box-shadow: 0 8px 0 rgba(0, 0, 0, .55), 0 14px 28px rgba(0, 0, 0, .16);
-  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+  letter-spacing: .04em;
+  font-size: 18px;
+  text-transform: uppercase;
+  border: none;
+  overflow: visible;
 }
 
-.directorBtn:hover {
-  transform: translateY(-2px);
-  filter: brightness(1.03);
-  box-shadow: 0 6px 0 rgba(0, 0, 0, .55), 0 16px 32px rgba(0, 0, 0, .18);
+.directorBtn::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  background: transparent;
+  border: 2.5px solid #f67b1b;
+  z-index: -1;
+  transition: top .18s ease, left .18s ease;
+}
+
+.directorBtn:hover::after {
+  top: 8px;
+  left: 8px;
 }
 
 /* Awards Section */
@@ -2100,28 +2162,46 @@ html.lenis body {
   margin-top: 40px;
   display: flex;
   justify-content: center;
+  position: relative;
+  z-index: 0;
 }
 
 .infraBtn {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 320px;
   height: 56px;
-  border-radius: 10px;
-  background: linear-gradient(90deg, #0b2c61 0%, #2f6fd6 100%);
+  border-radius: 14px;
+  background: #1e3a5f;
   color: #fff;
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
-  letter-spacing: .06em;
-  box-shadow: 0 8px 0 rgba(0, 0, 0, .55), 0 14px 28px rgba(0, 0, 0, .16);
-  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+  letter-spacing: .04em;
+  font-size: 18px;
+  text-transform: uppercase;
+  border: none;
+  overflow: visible;
 }
 
-.infraBtn:hover {
-  transform: translateY(-2px);
-  filter: brightness(1.03);
-  box-shadow: 0 6px 0 rgba(0, 0, 0, .55), 0 16px 32px rgba(0, 0, 0, .18);
+.infraBtn::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  background: transparent;
+  border: 2.5px solid #f67b1b;
+  z-index: -1;
+  transition: top .18s ease, left .18s ease;
+}
+
+.infraBtn:hover::after {
+  top: 8px;
+  left: 8px;
 }
 
 /* Visit Section */
@@ -2194,31 +2274,26 @@ html.lenis body {
 }
 
 .visitBtn {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 14px 18px;
-  border-radius: 10px;
-  background: #ff7a1a;
+  padding: 16px 36px;
+  border-radius: 14px;
+  background: #f67b1b;
   color: #fff;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: .04em;
   text-transform: none;
   text-decoration: none;
-  font-size: 14px;
-  box-shadow: 0 10px 0 rgba(0, 0, 0, .28);
-  transition: transform .18s ease, filter .18s ease, box-shadow .18s ease;
+  font-size: 18px;
+  border: none;
+  box-shadow: 6px 6px 0 0 #eef6ff, 6px 6px 0 2.5px #1e3a5f;
+  transition: box-shadow .18s ease;
 }
 
 .visitBtn:hover {
-  transform: translateY(-2px);
-  filter: brightness(1.03);
-  box-shadow: 0 8px 0 rgba(0, 0, 0, .28);
-}
-
-.visitBtn:active {
-  transform: translateY(6px);
-  box-shadow: 0 4px 0 rgba(0, 0, 0, .28);
+  box-shadow: 8px 8px 0 0 #eef6ff, 8px 8px 0 2.5px #1e3a5f;
 }
 
 /* Limited Seats Section */
@@ -2590,37 +2665,47 @@ html.lenis body {
   }
 }
 
-/* Center last stat item when alone in row */
+/* Mobile stats: reorder, left-align, larger text */
 @media (max-width: 768px) {
   .statsGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 30px 20px;
   }
 
-  .statItem:last-child:nth-child(odd) {
-    grid-column: span 2;
-    justify-self: center;
-    min-width: 50%;
-  }
-}
-
-@media (max-width: 600px) {
-  .statsGrid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .statItem:last-child:nth-child(odd) {
-    grid-column: span 2;
-    justify-self: center;
-    min-width: 50%;
-  }
-
-  .statValue {
-    font-size: 36px;
+  .statItem {
+    align-items: center;
+    text-align: center;
   }
 
   .statLabel {
-    font-size: 14px;
+    align-self: center;
+    text-align: left;
+  }
+
+  /* Reorder: 23+ Years (1st) | 150+ Teachers (3rd) / 2000+ Students (4th) | 1:13 Ratio (2nd) */
+  .statItem:nth-child(1) {
+    order: 1;
+  }
+
+  .statItem:nth-child(2) {
+    order: 4;
+  }
+
+  .statItem:nth-child(3) {
+    order: 2;
+  }
+
+  .statItem:nth-child(4) {
+    order: 3;
+  }
+
+  .statValue {
+    font-size: clamp(36px, 6vw, 48px);
+  }
+
+  .statLabel {
+    font-size: 16px;
+    font-weight: 600;
   }
 }
 
@@ -2742,17 +2827,8 @@ html.lenis body {
   }
 }
 
-@media (max-width: 400px) {
-  .statsGrid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 
-  .statItem:last-child:nth-child(odd) {
-    grid-column: span 2;
-    justify-self: center;
-    min-width: 50%;
-  }
-}
+
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -3745,6 +3821,7 @@ button,
   .limitedContactText {
     text-align: left !important;
     display: block !important;
+    font-size: 13px;
   }
 }
 
@@ -3939,20 +4016,23 @@ button,
     z-index: 1 !important;
   }
 }
+
 /* Add proper visual separation between IITians and Academic sections */
 @media (max-width: 560px) {
+
   /* Add spacing to Academic Achievers section for visual separation */
   .academicSection {
-    padding-top: 60px !important;  /* Add space for visual separation */
+    padding-top: 60px !important;
+    /* Add space for visual separation */
     margin-top: 0 !important;
   }
-  
+
   /* Keep IITians section tight */
   .iitiansSection {
     padding-bottom: 0 !important;
     margin-bottom: 0 !important;
   }
-  
+
   /* Adjust button to not overlap too much */
   .iitiansBtn {
     margin-bottom: 0 !important;
@@ -3963,6 +4043,7 @@ button,
 
 /* Remove final 2px gap between sections */
 @media (max-width: 560px) {
+
   /* Eliminate all possible spacing sources */
   .iitiansSection,
   .iitiansInner,
@@ -3973,35 +4054,40 @@ button,
     padding-bottom: 0 !important;
     border-bottom: none !important;
   }
-  
+
   /* Remove any line-height or spacing from button area */
   .iitiansCta {
     line-height: 0 !important;
   }
-  
+
   /* Ensure Academic section starts immediately */
   .academicSection {
-    margin-top: -2px !important;  /* Pull up 2px to close gap */
+    margin-top: -2px !important;
+    /* Pull up 2px to close gap */
   }
 }
 
 
 /* Fix button visibility and adjust gap to 0.7px */
 @media (max-width: 560px) {
+
   /* Restore button visibility */
   .iitiansCta {
-    line-height: normal !important;  /* Restore normal line-height */
+    line-height: normal !important;
+    /* Restore normal line-height */
   }
-  
+
   /* Fine-tune gap closure to 0.7px */
   .academicSection {
-    margin-top: -0.7px !important;  /* Pull up just 0.7px */
+    margin-top: -0.7px !important;
+    /* Pull up just 0.7px */
   }
 }
 
 
 /* Hide Book A Seat button from IITians section on mobile */
 @media (max-width: 560px) {
+
   .iitiansBtn,
   .iitiansCta {
     display: none !important;
@@ -4015,28 +4101,33 @@ button,
     display: flex !important;
     flex-direction: column !important;
   }
-  
+
   .hero-left {
-    order: 1 !important;  /* Title first */
+    order: 1 !important;
+    /* Title first */
   }
-  
+
   .hero-right {
-    order: 2 !important;  /* Form second */
+    order: 2 !important;
+    /* Form second */
   }
-  
+
   /* Call button container */
   .hero-left .mt-6,
   .hero-left \u003e div:has(.call-btn) {
-    order: 3 !important;  /* Call button last (below form) */
+    order: 3 !important;
+    /* Call button last (below form) */
   }
 }
 
 
 /* Reduce top spacing for call button below form */
 @media (max-width: 560px) {
+
   /* Target the call button container that comes after hero-grid */
   .hero-inner \u003e .mt-6 {
-    margin-top: 1rem !important;  /* Reduce from 1.5rem (mt-6) to 1rem */
+    margin-top: 1rem !important;
+    /* Reduce from 1.5rem (mt-6) to 1rem */
   }
 }
 
@@ -4059,70 +4150,82 @@ body.scrolling-up .hero-bg--reveal {
 /* Optimize hero section spacing for mobile to fit all elements on screen */
 @media (max-width: 560px) {
   .hero {
-    min-height: 100vh !important;  /* Ensure it fits in viewport */
-    padding-top: 60px !important;  /* Reduce top padding */
-    padding-bottom: 20px !important;  /* Reduce bottom padding */
+    min-height: 100vh !important;
+    /* Ensure it fits in viewport */
+    padding-top: 60px !important;
+    /* Reduce top padding */
+    padding-bottom: 20px !important;
+    /* Reduce bottom padding */
   }
-  
+
   .hero-inner {
-    gap: 1rem !important;  /* Reduce gap between elements */
+    gap: 1rem !important;
+    /* Reduce gap between elements */
   }
-  
+
   .hero-grid {
-    gap: 1rem !important;  /* Reduce gap between title and form */
+    gap: 1rem !important;
+    /* Reduce gap between title and form */
   }
-  
+
   .hero-title {
-    font-size: clamp(20px, 5vw, 28px) !important;  /* Reduce title size */
+    font-size: clamp(20px, 5vw, 28px) !important;
+    /* Reduce title size */
     margin-bottom: 0.5rem !important;
   }
-  
+
   .enquiry-card {
-    padding: 1rem !important;  /* Reduce form padding */
+    padding: 1rem !important;
+    /* Reduce form padding */
   }
-  
+
   .formFieldLike,
   .formSelectLike {
-    padding: 0.6rem !important;  /* Reduce field padding */
-    margin-bottom: 0.5rem !important;  /* Reduce field spacing */
+    padding: 0.6rem !important;
+    /* Reduce field padding */
+    margin-bottom: 0.5rem !important;
+    /* Reduce field spacing */
   }
-  
+
   /* Further reduce call button top margin */
   .hero-inner \u003e .mt-6 {
-    margin-top: 0.5rem !important;  /* Minimal spacing */
+    margin-top: 0.5rem !important;
+    /* Minimal spacing */
   }
 }
 
 
 /* AGGRESSIVE hero section compression for mobile - fit all in viewport */
 @media (max-width: 560px) {
+
   /* Further compress hero section */
   .hero {
-    padding-top: 70px !important;  /* Just below header */
+    padding-top: 70px !important;
+    /* Just below header */
     padding-bottom: 10px !important;
   }
-  
+
   .hero-inner {
     gap: 0.5rem !important;
   }
-  
+
   .hero-grid {
     gap: 0.75rem !important;
   }
-  
+
   /* Further reduce title */
   .hero-title {
     font-size: clamp(18px, 4.5vw, 24px) !important;
     line-height: 1.2 !important;
     margin-bottom: 0.25rem !important;
   }
-  
+
   /* Compress form significantly */
   .enquiry-card {
     padding: 0.75rem !important;
     gap: 0.25rem !important;
   }
-  
+
   .formFieldLike,
   .formSelectLike,
   .select-trigger {
@@ -4131,26 +4234,26 @@ body.scrolling-up .hero-bg--reveal {
     height: auto !important;
     min-height: 40px !important;
   }
-  
+
   /* Reduce spacing between form fields */
-  .formFieldLike + .formFieldLike,
-  .formFieldLike + .custom-select-container,
-  .custom-select-container + .custom-select-container {
+  .formFieldLike+.formFieldLike,
+  .formFieldLike+.custom-select-container,
+  .custom-select-container+.custom-select-container {
     margin-top: 0.4rem !important;
   }
-  
+
   /* Smaller submit button */
   .enquiry-card button[type='submit'] {
     padding: 0.7rem !important;
     font-size: 15px !important;
     margin-top: 0.5rem !important;
   }
-  
+
   /* Minimal call button margin */
   .hero-inner \u003e .mt-6 {
     margin-top: 0.25rem !important;
   }
-  
+
   /* Reduce call button size */
   .call-btn {
     padding: 0.6rem 1rem !important;
@@ -4161,6 +4264,7 @@ body.scrolling-up .hero-bg--reveal {
 
 /* Fix form styling issues on mobile */
 @media (max-width: 560px) {
+
   /* Reset form fields to proper styling */
   .formFieldLike,
   .formSelectLike,
@@ -4168,28 +4272,29 @@ body.scrolling-up .hero-bg--reveal {
     width: 100% !important;
     box-sizing: border-box !important;
     padding: 12px 16px !important;
-    font-size: 16px !important; /* Prevents iOS zoom */
+    font-size: 16px !important;
+    /* Prevents iOS zoom */
     height: auto !important;
     min-height: 48px !important;
     border-radius: 25px !important;
-    border: 2px solid rgba(255,255,255,0.3) !important;
-    background: rgba(255,255,255,0.95) !important;
+    border: 2px solid rgba(255, 255, 255, 0.3) !important;
+    background: rgba(255, 255, 255, 0.95) !important;
     color: #333 !important;
   }
-  
+
   /* Fix custom select container */
   .custom-select-container {
     width: 100% !important;
     margin-bottom: 0.5rem !important;
   }
-  
+
   /* Fix select trigger display */
   .select-trigger {
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
   }
-  
+
   /* Fix form container */
   .enquiry-card,
   .enquiryFormLike {
@@ -4198,7 +4303,7 @@ body.scrolling-up .hero-bg--reveal {
     padding: 1.25rem !important;
     border-radius: 16px !important;
   }
-  
+
   /* Fix submit button */
   .enquiry-card button[type='submit'],
   .formSubmitLike {
@@ -4208,17 +4313,18 @@ body.scrolling-up .hero-bg--reveal {
     border-radius: 25px !important;
     margin-top: 0.75rem !important;
   }
-  
+
   /* Fix limited seats form styling */
   .limitedForm .formFieldLike,
   .limitedForm .select-trigger {
-    background: rgba(255,255,255,0.95) !important;
+    background: rgba(255, 255, 255, 0.95) !important;
   }
 }
 
 
 /* Fix custom select dropdowns to match input fields */
 @media (max-width: 560px) {
+
   /* Remove extra styling from select container */
   .custom-select-container,
   .formSelectLike {
@@ -4228,26 +4334,123 @@ body.scrolling-up .hero-bg--reveal {
     margin-bottom: 0.5rem !important;
     box-shadow: none !important;
   }
-  
+
   /* Style select trigger same as input fields */
   .select-trigger {
     padding: 12px 16px !important;
     min-height: 48px !important;
     border-radius: 25px !important;
-    border: 2px solid rgba(200,200,200,0.4) !important;
-    background: rgba(255,255,255,0.95) !important;
+    border: 2px solid rgba(200, 200, 200, 0.4) !important;
+    background: rgba(255, 255, 255, 0.95) !important;
     box-shadow: none !important;
   }
-  
+
   /* Ensure input fields match */
   .formFieldLike {
     padding: 12px 16px !important;
     min-height: 48px !important;
     border-radius: 25px !important;
-    border: 2px solid rgba(200,200,200,0.4) !important;
-    background: rgba(255,255,255,0.95) !important;
+    border: 2px solid rgba(200, 200, 200, 0.4) !important;
+    background: rgba(255, 255, 255, 0.95) !important;
     margin-bottom: 0.5rem !important;
     box-shadow: none !important;
   }
 }
 
+
+/* Increase logo size and add top margin on mobile */
+@media (max-width: 560px) {
+  .hero-logo {
+    height: 3.5rem !important;
+    /* Increase from h-10 (2.5rem) */
+    margin-top: 10px !important;
+  }
+}
+
+
+/* More top margin above logo on mobile */
+@media (max-width: 560px) {
+  .hero-logo {
+    margin-top: 25px !important;
+  }
+}
+
+
+/* Add top margin to achievements heading on mobile */
+@media (max-width: 560px) {
+  .achTitle {
+    margin-top: 30px !important;
+  }
+}
+
+
+/* Make achievements header white on mobile */
+@media (max-width: 560px) {
+  .achSection {
+    background-color: #ffffff !important;
+  }
+
+  .achHeader {
+    background-color: #ffffff !important;
+  }
+
+  .achTitle,
+  .achTitleLine1,
+  .achTitleLine2 {
+    color: #0b2c61 !important;
+  }
+}
+
+
+/* Force white background on achievements section heading area on mobile */
+@media (max-width: 560px) {
+  #achievements {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+  }
+
+  #achievements .achHeader {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+  }
+
+  #achievements .achTitle,
+  #achievements .achTitleLine1,
+  #achievements .achTitleLine2,
+  #achievements .achTitle span {
+    color: #0b2c61 !important;
+    background: transparent !important;
+  }
+
+  #achievements .achTitle::before,
+  #achievements .achTitle::after,
+  #achievements .achHeader::before,
+  #achievements .achHeader::after {
+    display: none !important;
+    background: transparent !important;
+  }
+}
+
+
+/* NUCLEAR fix: force white on achSection with all possible background overrides */
+@media (max-width: 560px) {
+  section#achievements.achSection {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    background-image: none !important;
+    background-blend-mode: normal !important;
+    position: relative !important;
+    z-index: 1 !important;
+  }
+
+  section#achievements.achSection::before,
+  section#achievements.achSection::after {
+    display: none !important;
+    content: none !important;
+  }
+
+  /* Also make body/page background visible as white between sections */
+  body {
+    background-color: #ffffff !important;
+  }
+}
