@@ -616,7 +616,7 @@ html.lenis body {
     height: auto;
     min-height: 170px;
     padding: 20px 12px 16px;
-    border: 1px solid rgba(0, 0, 0, 0.08);
+    /* border: 1px solid rgba(0, 0, 0, 0.08); Removed */
     border-radius: 4px;
     display: flex !important;
     flex-direction: column !important;
@@ -688,7 +688,7 @@ html.lenis body {
   max-width: var(--cardW);
   height: var(--cardH);
   background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  /* border: 1px solid rgba(0, 0, 0, 0.08); Removed */
   border-radius: 4px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   overflow: hidden;
@@ -1782,7 +1782,7 @@ html.lenis body {
   content: "";
   position: absolute;
   inset: 0;
-  border: 3px solid #0b2c61;
+  border: 0px solid #0b2c61;
   border-radius: 22px;
   z-index: 2;
   pointer-events: none;
@@ -1885,7 +1885,7 @@ html.lenis body {
   position: relative;
   background: #fff;
   border-radius: 6px;
-  border: 1px solid rgba(0, 0, 0, .06);
+  /* border: 1px solid rgba(0, 0, 0, .06); Removed */
   box-shadow: 0 18px 40px rgba(0, 0, 0, .10);
   overflow: hidden;
 }
@@ -2259,7 +2259,7 @@ html.lenis body {
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
-  border: 1px solid rgba(0, 0, 0, .06);
+  /* border: 1px solid rgba(0, 0, 0, .06); Removed */
   box-shadow: 0 22px 50px rgba(0, 0, 0, .10);
 }
 
@@ -2808,7 +2808,7 @@ html.lenis body {
   }
 
   .achTitleLine1 {
-    white-space: normal;
+    white-space: nowrap !important;
   }
 
   .directorMain {
@@ -4383,6 +4383,7 @@ body.scrolling-up .hero-bg--reveal {
 @media (max-width: 560px) {
   .achTitle {
     margin-top: 30px !important;
+    font-size: 18px !important;
   }
 }
 
